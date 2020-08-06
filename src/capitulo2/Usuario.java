@@ -1,10 +1,17 @@
 package capitulo2;
 
+import capitulo8.Pedido;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Usuario {
 
     private String nome;
     private int pontos;
     private boolean moderador;
+    private List<Pedido> pedidos = new ArrayList<>();
 
     public Usuario() {
         nome = "";
@@ -35,6 +42,14 @@ public class Usuario {
 
     public boolean isModerador() {
         return moderador;
+    }
+
+    public void adicionar(Pedido pedido) {
+        this.pedidos.add(pedido);
+    }
+
+    public List<Pedido> getPedidos() {
+        return Collections.unmodifiableList(pedidos);
     }
 
     @Override
