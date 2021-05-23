@@ -27,7 +27,7 @@ public class Capitulo8_9 {
         // O IntStream resultante possui todos os caracteres de todos os arquivos java do nosso diretório
 
         IntStream chars = Files
-                .list(Paths.get("./src/capitulo8"))
+                    .list(Paths.get("./src/capitulo8"))
                 .filter(p -> p.toString().endsWith(".java"))
                 .flatMap(p -> GZFiles.lines(p))
                 .flatMapToInt((String s) -> s.chars());

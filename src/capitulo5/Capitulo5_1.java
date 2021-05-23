@@ -21,7 +21,7 @@ public class Capitulo5_1 {
 
     /* Ordenação com a instanciação de uma classe anônima */
     private static void metodoOrdenacao1(List<Usuario> usuarios) {
-        Comparator<Usuario> comparator = new Comparator<>() {
+        Comparator<Usuario> comparator = new Comparator<Usuario>() {
             public int compare(Usuario u1, Usuario u2) {
                 //return u1.getNome().compareTo(u2.getNome());
                 return String.CASE_INSENSITIVE_ORDER.compare(u1.getNome(), u2.getNome());
